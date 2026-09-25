@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+@theme {
+    --breakpoint-*: initial;
+    --breakpoint-sm : 570px;
+    --breakpoint-md : 780px;
+    --breakpoint-lg : 990px;
+    --breakpoint-xl : 1180px;
+    --breakpoint-xxl : 1500px;
+    --color-primary: #734BDF;
+    --color-secondary: #161A2D;
+    --font-onest : "Onest", sans-serif;
+
+   --animate-double-pulse: animate-pulse-custom 3s linear infinite;
+
+  @keyframes animate-pulse-custom {
+    0% {
+      box-shadow: 0 0 0 0 violet, 0 0 0 0 violet;
+    }
+    40% {
+      box-shadow: 0 0 0 50px violet, 0 0 0 0 violet;
+    }
+    80% {
+      box-shadow: 0 0 0 50px violet, 0 0 0 30px violet;
+    }
+    100% {
+      box-shadow: 0 0 0 0 violet, 0 0 0 30px violet;
+    }
+  }
+}
+
+@utility container {
+    @apply mx-auto
+}
