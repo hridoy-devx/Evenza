@@ -3,12 +3,19 @@ import Container from './Container'
 import Event1 from '../assets/event1.png'
 import Event2 from '../assets/event2.png'
 import Event3 from '../assets/event3.png'
+import { motion } from 'framer-motion'
 
 const EventThree = () => {
   return (
     <>
     <Container>
-        <div className="w-full max-w-full h-35.25 flex justify-between items-center border-b-2 border-gray-50 px-4 py-px mx-auto">
+        <motion.div 
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            className="w-full max-w-full h-35.25 flex justify-between items-center border-b-2 border-gray-50 px-4 py-px mx-auto"
+        >
             <div className="flex gap-5 items-center  ">
                 <div>
                     <img src={Event3} alt="" />
@@ -26,8 +33,15 @@ const EventThree = () => {
                 {/* <img src={} alt="" /> */}
                 <p>Street, Block 12 Sector 4, Ipsum City</p>
             </div>
-        </div>
-        <div className="w-full max-w-full h-35.25 flex justify-between items-center border-b-2 border-gray-50 px-4 py-px mx-auto">
+        </motion.div>
+
+        <motion.div 
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="w-full max-w-full h-35.25 flex justify-between items-center border-b-2 border-gray-50 px-4 py-px mx-auto"
+        >
             <div className="flex gap-5 items-center  ">
                 <div>
                     <img src={Event2} alt="" />
@@ -45,9 +59,15 @@ const EventThree = () => {
                 {/* <img src={} alt="" /> */}
                 <p>Street, Block 12 Sector 4, Ipsum City</p>
             </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full max-w-full h-35.25 flex justify-between items-center border-b-2 border-gray-50 px-4 py-px mx-auto">
+        <motion.div 
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full max-w-full h-35.25 flex justify-between items-center border-b-2 border-gray-50 px-4 py-px mx-auto"
+        >
             <div className="flex gap-5 items-center  ">
                 <div>
                     <img src={Event1} alt="" />
@@ -65,7 +85,7 @@ const EventThree = () => {
                 {/* <img src={} alt="" /> */}
                 <p>Street, Block 12 Sector 4, Ipsum City</p>
             </div>
-        </div>
+        </motion.div>
     </Container>
     </>
   )

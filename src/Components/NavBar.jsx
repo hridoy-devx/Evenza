@@ -3,44 +3,68 @@ import Logo from "../assets/Link.png"
 import Container from './Container'
 import Flex from './Flex'
 import Button from './Button'
-import { NavLink } from "react-router";
+import { NavLink } from "react-router"
 
 const NavBar = () => {
     return (
         <>
-            <nav className='absolute top-0 left-0 w-full backdrop-blur-md bg-[ffffff11] text-white py-6.25'>
+            <nav className='sticky top-0 left-0 w-full z-50 bg-[#0b0b1a]/90 backdrop-blur-md text-white py-6 border-b border-white/10 shadow-xl'>
                 <Container>
                     <Flex className='justify-between items-center'>
                         <div>
-                            <img src={Logo} alt="" />
+                            <img src={Logo} alt="Logo" />
                         </div>
-                        <ul className='flex gap-5 items-center'>
+                        <ul className='flex gap-8 items-center font-medium'>
                             <li>
-                                <NavLink to="/" end>
+                                <NavLink 
+                                    to="/" 
+                                    end 
+                                    className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
+                                >
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/about" end>
+                                <NavLink 
+                                    to="/about" 
+                                    end 
+                                    className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
+                                >
                                     About Us
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/schedule" end>
+                                <NavLink 
+                                    to="/schedule" 
+                                    end 
+                                    className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
+                                >
                                     Schedule
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/blog" end>
+                                <NavLink 
+                                    to="/blog" 
+                                    end 
+                                    className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
+                                >
                                     Blog
                                 </NavLink>
                             </li>
-                            <li>Pages</li>
-                            <li><NavLink to="/contact" end>
-                                Contact Us
-                            </NavLink></li>
+                            <li className="text-gray-300 cursor-pointer hover:text-white transition duration-300">Pages</li>
+                            <li>
+                                <NavLink 
+                                    to="/contact" 
+                                    end 
+                                    className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
+                                >
+                                    Contact Us
+                                </NavLink>
+                            </li>
                         </ul>
-                        <Button>Join the Conference</Button>
+                        <Button className="bg-purple-600 hover:bg-purple-700 transition duration-300 text-white px-6 py-2.5 rounded-full shadow-lg shadow-purple-600/30">
+                            Join the Conference
+                        </Button>
                     </Flex>
                 </Container>
             </nav>

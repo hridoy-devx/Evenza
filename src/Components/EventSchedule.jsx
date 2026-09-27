@@ -5,6 +5,7 @@ import EventOne from './EventOne'
 import EventTwo from './EventTwo'
 import EventThree from './EventThree'
 import NavBar from './NavBar'
+import { motion } from 'framer-motion'
 
 const EventSchedule = () => {
     const [activeDay,setActiveDay] = useState("Day 01")
@@ -25,7 +26,13 @@ const EventSchedule = () => {
         <>
             <div className='bg-[url(./assets/EventSc.png)] bg-cover bg-center bg-no-repeat py-25 overflow-x-hidden'>
                 <Container>
-                    <div className='max-w-3xl mx-auto text-center'>
+                    <motion.div 
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.6 }}
+                        className='max-w-3xl mx-auto text-center'
+                    >
                         <Flex className='gap-4 justify-center items-center'>
                             <div className='h-1.5 w-1.5 bg-primary rounded-full'></div>
                             <p className='font-semibold text-[14px] text-white'>Our Event Schedule</p>
@@ -45,7 +52,7 @@ const EventSchedule = () => {
                                 </button>
                             </Flex>
                         </div>
-                    </div>
+                    </motion.div>
                                 
                     <div className='pt-10'>
                         {renderActive()}

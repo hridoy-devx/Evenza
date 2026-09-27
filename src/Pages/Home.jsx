@@ -30,5 +30,6 @@ const Home = () => {
     </div>
   )
 }
-
-export default Home
+ 
+// About.jsx, Schedule.jsx, Blog.jsx, Contact.jsx
+export default Home                   

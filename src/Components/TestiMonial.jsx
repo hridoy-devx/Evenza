@@ -9,6 +9,7 @@ import Vector3 from '../assets/Vector3.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderImport from "react-slick";
+import { motion } from 'framer-motion'
 const Slider = SliderImport.default ?? SliderImport;
 
 const TestiMonial = () => {
@@ -34,15 +35,27 @@ const TestiMonial = () => {
         <>
             <div style={{ backgroundImage: `url(${TestBg})` }} className='bg-center bg-no-repeat bg-cover py-25 overflow-x-hidden'>
                 <Container>
-                    <div className='max-w-3xl mx-auto text-center'>
+                    <motion.div 
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.6 }}
+                        className='max-w-3xl mx-auto text-center'
+                    >
                         <Flex className='gap-4 justify-center items-center'>
                             <div className='h-1.5 w-1.5 bg-white rounded-full'></div>
                             <p className='font-semibold text-[14px] text-white'>Testimonials</p>
                         </Flex>
                         <h1 className='font-semibold text-3xl md:text-5xl text-white leading-tight pt-2.5'>What our customers say about their experience</h1>
-                    </div>
+                    </motion.div>
 
-                    <div className='mt-16 w-full'>
+                    <motion.div 
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                        className='mt-16 w-full'
+                    >
                         <Slider {...settings} className='w-full'>
                             <div className='px-3'>
                                 <div className='w-full max-w-[350px] min-h-[420px] bg-primary rounded-[20px] p-8 mx-auto flex flex-col justify-between'>
@@ -50,7 +63,7 @@ const TestiMonial = () => {
                                         <p className='text-[16px] text-white'>Over 15,000+ Attendees Connected Worldwide</p>
                                         <h4 className='mt-12 text-[20px] text-white font-bold'>Client Experience Speak For Themselves</h4>
                                     </div>
-                                    <button className='w-full max-w-[180px] bg-white text-primary px-6 py-3 rounded-full font-semibold'>View All Reviews</button>
+                                    <button className='w-full max-w-[180px] bg-white text-primary px-6 py-3 rounded-full font-semibold cursor-pointer'>View All Reviews</button>
                                 </div>
                             </div>
                             <div className='px-3'>
@@ -104,36 +117,43 @@ const TestiMonial = () => {
                                 </div>
                             </div>
                         </Slider>
-                    </div>
+                    </motion.div>
 
-                    <Flex className='items-center justify-between mt-20 flex-wrap lg:flex-nowrap gap-4'>
-                        <div className='bg-gray-500 flex-1 h-px hidden md:block'></div>
-                        <p className='text-[18px] font-semibold text-white text-center'>Supported by Brands That Inspire Innovation</p>
-                        <div className='bg-gray-500 flex-1 h-px hidden md:block'></div>
-                    </Flex>
+                    <motion.div 
+                        initial={{ opacity: 0, y: -30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.7, delay: 0.4 }}
+                    >
+                        <Flex className='items-center justify-between mt-20 flex-wrap lg:flex-nowrap gap-4'>
+                            <div className='bg-gray-500 flex-1 h-px hidden md:block'></div>
+                            <p className='text-[18px] font-semibold text-white text-center'>Supported by Brands That Inspire Innovation</p>
+                            <div className='bg-gray-500 flex-1 h-px hidden md:block'></div>
+                        </Flex>
 
-                    <Flex className='mt-12 gap-8 justify-center items-center flex-wrap'>
-                        <Flex className='gap-2 items-center'>
-                            <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
-                            <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
+                        <Flex className='mt-12 gap-8 justify-center items-center flex-wrap'>
+                            <Flex className='gap-2 items-center'>
+                                <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
+                                <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
+                            </Flex>
+                            <Flex className='gap-2 items-center'>
+                                <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
+                                <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
+                            </Flex>
+                            <Flex className='gap-2 items-center'>
+                                <img src={Vector3} alt="" className='w-10 h-10 rounded-full object-cover' />
+                                <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
+                            </Flex>
+                            <Flex className='gap-2 items-center'>
+                                <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
+                                <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
+                            </Flex>
+                            <Flex className='gap-2 items-center'>
+                                <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
+                                <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
+                            </Flex>
                         </Flex>
-                        <Flex className='gap-2 items-center'>
-                            <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
-                            <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
-                        </Flex>
-                        <Flex className='gap-2 items-center'>
-                            <img src={Vector3} alt="" className='w-10 h-10 rounded-full object-cover' />
-                            <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
-                        </Flex>
-                        <Flex className='gap-2 items-center'>
-                            <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
-                            <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
-                        </Flex>
-                        <Flex className='gap-2 items-center'>
-                            <img src={Vector} alt="" className='w-10 h-10 rounded-full object-cover' />
-                            <h3 className='font-bold text-[18px] text-white'>Logoipsum</h3>
-                        </Flex>
-                    </Flex>
+                    </motion.div>
                 </Container>
             </div>
         </>
