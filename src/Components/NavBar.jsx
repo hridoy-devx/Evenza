@@ -19,6 +19,7 @@ const NavBar = () => {
                                 <NavLink 
                                     to="/" 
                                     end 
+                                    onClick={() => window.scrollTo(0, 0)}
                                     className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
                                 >
                                     Home
@@ -28,6 +29,7 @@ const NavBar = () => {
                                 <NavLink 
                                     to="/about" 
                                     end 
+                                    onClick={() => window.scrollTo(0, 0)}
                                     className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
                                 >
                                     About Us
@@ -37,6 +39,7 @@ const NavBar = () => {
                                 <NavLink 
                                     to="/schedule" 
                                     end 
+                                    onClick={() => window.scrollTo(0, 0)}
                                     className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
                                 >
                                     Schedule
@@ -46,6 +49,7 @@ const NavBar = () => {
                                 <NavLink 
                                     to="/blog" 
                                     end 
+                                    onClick={() => window.scrollTo(0, 0)}
                                     className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
                                 >
                                     Blog
@@ -56,6 +60,7 @@ const NavBar = () => {
                                 <NavLink 
                                     to="/contact" 
                                     end 
+                                    onClick={() => window.scrollTo(0, 0)}
                                     className={({ isActive }) => isActive ? "text-purple-400 font-semibold" : "text-gray-300 hover:text-white transition duration-300"}
                                 >
                                     Contact Us
